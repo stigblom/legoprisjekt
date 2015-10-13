@@ -1,0 +1,10 @@
+
+
+
+LysFiltrert(k) = FIR_filter(Lys(1:k),m); %filtrert lyssignal
+Ts(k-1) = Tid(k)-Tid(k-1); % beregn tidsskritt i sekund PS ble endret fra k-1 til k. TEST!
+avvik(k) = Lys(k)-nullpunkt; % beregn avvik fra nullpunkt
+LysIntegrert(k) = EulerForover(LysIntegrert(k-1),avvik(k-1),Ts(k-1)); %endret alle fra k-1 tEST
+%LysIntegrert(k) = Trapes(LysIntegrert(k-1),avvik(k-1:k),Ts(k-1));
+LysDerivert(k-1) = Derivasjon(LysFiltrert(k-1:k), Ts(k-1); % deriverer
+
