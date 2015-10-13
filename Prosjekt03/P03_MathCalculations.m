@@ -9,5 +9,6 @@ LysIntegrert(k) = EulerForover(LysIntegrert(k-1),avvik(k-1),Ts(k-1)); %Calls Eul
 LysFiltrertIIR(k) = IIRfilter(Lys(k),LysFiltrert(k-1));               %Calls IIR function
 LysIntegrertT(k) = Trapes(LysIntegrert(k-1),avvik(k-1:k),Ts(k-1));    %Calls Trapes function
 LysDerivert(k-1) = Derivasjon(LysFiltrert(k-1:k), Ts(k-1));           %Calls Derivasjon function
-PID(k) = PID(avvik(k),LysIntegrert(k),LysDerivert(k-1),P,I,D);
 
+%reg(k) = PID(avvik(k),LysIntegrert(k),LysDerivert(k-1),P,I,D);
+reg(k) = (avvik(k)*P + LysIntegrert(k)*I + LysDerivert(k-1)*D);

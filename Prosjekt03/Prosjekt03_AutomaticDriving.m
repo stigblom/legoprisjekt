@@ -8,10 +8,10 @@
 
 clear,clc, close all                %Cleans workspace, figures and cmdw
 online=0;                           %1 if NXT is connected to computer, set manually.
-filename = 'P03_Lys.mat';           %If online = 0, this data file is used
+filename = 'heihei.mat';           %If online = 0, this data file is used
 scrsz = get(groot,'ScreenSize');    %Get screensize
 Samples = 10;                       %Number of samples used in FIR filter
-P = 2;
+P = 1;
 I = 0;
 D = 0;
 fart = 15;
@@ -24,7 +24,7 @@ while JoyMainSwitch == 0 && Lys(k) < 610
     P03_GetNewMeasurement          
     P03_MathCalculations    
     P03_CalculateAndSetMotorPower 
-    P03_PlottData 
+    %P03_PlottData 
 
     
     

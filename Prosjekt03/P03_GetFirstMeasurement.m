@@ -23,6 +23,7 @@ else
     LysFiltrertIIR = Lys(k);        %Light filtrated(IIR) set to light value
 end
 
+reg = zeros(1,2);
 nullpunkt = Lys(k);                 %Zero set to first light mesurment
 nullp(k) = nullpunkt;               %Zero vektor defined
 

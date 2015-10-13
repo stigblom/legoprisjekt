@@ -2,11 +2,11 @@
 % å få motorene til å bevege seg
 
 if online 
-%     if reg(k) > fart 
-%         reg(k) = fart;
-%     elseif reg(k) < -1*fart
-%         reg(k) = -1*fart;
-%     end
+    if reg(k) > fart 
+        reg(k) = fart;
+    elseif reg(k) < -1*fart
+        reg(k) = -1*fart;
+    end
     if (fart - reg(k)) > 100
         motorA.Power = 100;
         motorA.SendToNXT();
@@ -29,11 +29,14 @@ if online
         motorC.SendToNXT();
         PowerC(k) = motorC.Power;
     else
-        motorC.Power = fart - reg(k);
-        motorC.SendToNXT();
-        PowerC(k) = motorC.Power;
+        motorA.Power = fart - reg(k);
+        motorA.SendToNXT();
+        PowerA(k) = motorA.Power;
     end
-
+    
+    motorC.Power = fart + reg(k);
+    motorC.SendToNXT();
+    PowerC(k) = motorC.Power;
    
 
 else
