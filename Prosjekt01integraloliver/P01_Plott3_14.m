@@ -6,7 +6,8 @@ f2 = figure(2);  %Sets frame to 2
 set(f2,'Position',...
     [(scrsz(3)/3 + ((scrsz(3)/3)/2)) scrsz(4)/3 scrsz(3)/3 scrsz(4)/3]);
 subplot(3,1,1)
-plot(Tid(1:k),Lys(1:k),Tid(1:k),LysFiltrert(1:k))   %plots light and filtrated
+h = plot(Tid(1:k),Lys(1:k),Tid(1:k),LysFiltrert(1:k))   %plots light and filtrated
+%set(h, 'XData',Tid(1:k),'YData',Lys(1:k))
 title('Lyssignal RAW og filtrert')
 xlabel('tid [sekund]')
 ylabel('Lyssignal')
