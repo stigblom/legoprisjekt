@@ -12,7 +12,7 @@ if online
     OpenLight(SENSOR_3,'ACTIVE');
     
     % Initialiser motorer (legg til etterhvert)
-    motorA = NXTMotor('A','SmoothStart',true);
+    motorB = NXTMotor('B','SmoothStart',true);
     motorC = NXTMotor('C','SmoothStart',true); 
         
     % Initialiser joystick

@@ -3,17 +3,17 @@
 
 if online 
     % Beregner motorpådrag og lagrer i datavektor
-    PowerA(k) = JoyForover(k)+JoySide(k);
+    PowerB(k) = JoyForover(k)+JoySide(k);
     PowerC(k) = JoyForover(k)-JoySide(k);
-    if PowerA(k) >= 100
-        motorA.Power = 99;
-        motorA.SendToNXT();
+    if PowerB(k) >= 100
+        motorB.Power = 99;
+        motorB.SendToNXT();
     else
-        motorA.Power = PowerA(k);
-        motorA.SendToNXT();
+        motorB.Power = PowerA(k);
+        motorB.SendToNXT();
     end
     % Setter powerdata mot NXT
-    if PowerA(k) >= 100
+    if PowerC(k) >= 100
         motorC.Power = 99;
         motorC.SendToNXT();
     else

@@ -8,17 +8,17 @@ if online
 %         reg(k) = -1*fart;
 %     end
     if (fart - reg(k)) > 100
-        motorA.Power = 100;
-        motorA.SendToNXT();
-        PowerA(k) = motorA.Power;
+        motorB.Power = 100;
+        motorB.SendToNXT();
+        PowerB(k) = motorB.Power;
     elseif (fart - reg(k)) < -100
-        motorA.Power = -100;
-        motorA.SendToNXT();
-        PowerA(k) = motorA.Power;
+        motorB.Power = -100;
+        motorB.SendToNXT();
+        PowerB(k) = motorB.Power;
     else
-        motorA.Power = fart - reg(k);
-        motorA.SendToNXT();
-        PowerA(k) = motorA.Power;
+        motorB.Power = fart - reg(k);
+        motorB.SendToNXT();
+        PowerB(k) = motorB.Power;
     end
     if (fart + reg(k)) > 100
         motorC.Power = 100;

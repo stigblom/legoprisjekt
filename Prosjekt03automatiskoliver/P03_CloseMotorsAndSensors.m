@@ -1,5 +1,5 @@
 if online  
-    motorA.Stop;      % Stopp motorer
+    motorB.Stop;      % Stopp motorer
     motorC.Stop;      % Stopp motorer
     clear joymex2     % Clear MEX-file to release joystick
     clear online k    % Clear online og k data (før eventuell lagring i *.mat)
